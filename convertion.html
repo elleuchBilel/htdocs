@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+
+  <label >F</label><br>
+  <input type="number" id="f"  value=""><br>
+  <label >C:</label><br>
+  <input type="number" id="c"  value=""><br><br>
+  <button type="button" onclick="FtoC()">F to C </button>
+  <button type="button" onclick="CtoF()"> C to F </button>
+
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+
+<script>
+function FtoC() {
+  var f = document.getElementById("f").value;
+  document.getElementById("c").value = (f-32)*59;
+}
+function CtoF() {
+  document.getElementById("f").value = (document.getElementById("c").value/59)+32;
+}
+
+</script>
+</body>
+</html>
+
